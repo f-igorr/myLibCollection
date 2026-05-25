@@ -10,7 +10,7 @@ CFLAGS    := -Wall -Wextra -Werror -std=c17
 LDLIBS    := -lm
 DEBUG     ?=
 
-CFLAGS$   += $(if $(DEBUG), -g -O0 -fsanitize=address -fno-omit-frame-pointer)
+CFLAGS    += $(if $(DEBUG), -g -O0 -fsanitize=address -fno-omit-frame-pointer)
 
 DIR_SRC   := ../src/
 DIR_INC   := ../include/
